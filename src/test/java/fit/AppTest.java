@@ -13,7 +13,7 @@ import java.util.Map;
 import org.junit.Test;
 
 import fit.core.AttendanceHelper;
-import fit.core.ListUtils;
+//import fit.core.ListUtils;
 
 /**
  * Unit test for simple App.
@@ -22,6 +22,7 @@ public class AppTest {
     /**
      * validate if class can sort an regular array
      */
+/*    
     @Test
     public void shouldSortList() {
         // arrange
@@ -54,7 +55,7 @@ public class AppTest {
         // assert
         assertArrayEquals(expectedResult.toArray(), actualResult.toArray());
     }
-
+*/
     @Test
     public void shouldGenerateRandomAttendanceList() {
         //arrange
@@ -62,7 +63,7 @@ public class AppTest {
             put("test one", true);
             put("test two", false);
         }};
-        
+
 
         //act
         Map<String, Boolean> attendanceListResult = AttendanceHelper.random(2, 50);
@@ -70,7 +71,7 @@ public class AppTest {
         //assert
 
         //same size (due to parameters sent to random method)
-        assertEquals(attendanceListResult.size(), attendanceListResult.size());
+        assertEquals(attendanceListResult.size(), attendanceListExpected.size());
 
         //same percentile of 'true' values due to parameters sent to random method
         assertEquals(
